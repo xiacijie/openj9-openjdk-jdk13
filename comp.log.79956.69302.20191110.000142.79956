@@ -1,0 +1,1510 @@
+<?xml version="1.0" standalone="no"?>
+<jitlog>
+<!--
+MULTIPLE LOG FILES MAY EXIST
+Please check for ADDITIONAL log files named:  comp.log.1  comp.log.2  comp.log.3  comp.log.4  comp.log.5  comp.log.6
+-->
+<compile
+	method="Add.doTest()I"
+	hotness="warm"
+	isProfilingCompile=0>
+</compile>
+
+
+=======>Add.doTest()I
+<ilgen
+	method="Add.doTest()I">
+   <request> {OrdinaryMethod(<NULL>)} </request>
+
+        +------------- Byte Code Index
+        |  +-------------------- OpCode
+        |  |                        +------------- First Field
+        |  |                        |     +------------- Branch Target
+        |  |                        |     |      +------- Const Pool Index
+        |  |                        |     |      |    +------------- Constant
+        |  |                        |     |      |    |
+        V  V                        V     V      V    V
+
+        0, JBiconst1            
+        1, JBistore0            
+        2, JBiconst2            
+        3, JBistore1            
+        4, JBiload0             
+        5, JBiload1             
+        6, JBiadd               
+        7, JBreturn1            
+
+genIL() returned 1
+<trees
+	title="Pre IlGenOpt Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Pre IlGenOpt Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2>                                                                   [  0x352f72a0] bci=[-1,0,3] rc=0 vc=0 vn=- li=- udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=0 vn=- li=- udi=- nc=1
+n3n         iconst 1                                                                          [  0x352f7340] bci=[-1,0,3] rc=1 vc=0 vn=- li=- udi=- nc=0
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=0 vn=- li=- udi=- nc=1
+n5n         iconst 2                                                                          [  0x352f73e0] bci=[-1,2,4] rc=1 vc=0 vn=- li=- udi=- nc=0
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=0 vn=- li=- udi=- nc=1
+n9n         iadd                                                                              [  0x352f7520] bci=[-1,6,5] rc=1 vc=0 vn=- li=- udi=- nc=2
+n7n           iload  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                               [  0x352f7480] bci=[-1,4,5] rc=1 vc=0 vn=- li=- udi=- nc=0
+n8n           iload  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                               [  0x352f74d0] bci=[-1,5,5] rc=1 vc=0 vn=- li=- udi=- nc=0
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=0 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Symbol References (incremental):
+--------------------------------
+#357:  <auto slot 0>[ Auto] [flags 0x3 0x0 ] [  0x35315d70] (Int32)
+#358:  <auto slot 1>[ Auto] [flags 0x3 0x0 ] [  0x35315e60] (Int32)
+
+Number of nodes = 10, symRefCount = 359
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(0) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(0) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0
+                 in        = [0(0) ]
+                 out       = [1(0) ]
+                 exception in  = []
+                 exception out = []
+
+</cfg>
+<optimize
+	method="Add.doTest()I"
+	hotness="warm">
+<optimization id=3 name=varHandleTransformer method=Add.doTest()I>
+Performing 3: varHandleTransformer mustBeDone
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=4 name=unsafeFastPath method=Add.doTest()I>
+Performing 4: unsafeFastPath
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=5 name=recognizedCallTransformer method=Add.doTest()I>
+Performing 5: recognizedCallTransformer
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=6 name=coldBlockMarker method=Add.doTest()I>
+Performing 6: coldBlockMarker
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=7 name=CFGSimplification method=Add.doTest()I>
+Performing 7: CFGSimplification
+            (Building alias info)
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=9 name=invariantArgumentPreexistence method=Add.doTest()I>
+Performing 9: invariantArgumentPreexistence
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+</optimize>
+</ilgen>
+<trees
+	title="Initial Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Initial Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2>                                                                   [  0x352f72a0] bci=[-1,0,3] rc=0 vc=0 vn=- li=- udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=0 vn=- li=- udi=- nc=1
+n3n         iconst 1                                                                          [  0x352f7340] bci=[-1,0,3] rc=1 vc=0 vn=- li=1 udi=- nc=0
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=0 vn=- li=- udi=- nc=1
+n5n         iconst 2                                                                          [  0x352f73e0] bci=[-1,2,4] rc=1 vc=0 vn=- li=1 udi=- nc=0
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=0 vn=- li=- udi=- nc=1
+n9n         iadd                                                                              [  0x352f7520] bci=[-1,6,5] rc=1 vc=0 vn=- li=1 udi=- nc=2
+n7n           iload  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                               [  0x352f7480] bci=[-1,4,5] rc=1 vc=0 vn=- li=1 udi=- nc=0
+n8n           iload  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                               [  0x352f74d0] bci=[-1,5,5] rc=1 vc=0 vn=- li=1 udi=- nc=0
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=0 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 10, symRefCount = 359
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(0) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(0) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0
+                 in        = [0(0) ]
+                 out       = [1(0) ]
+                 exception in  = []
+                 exception out = []
+
+</cfg>
+
+This method is warm
+<optimize
+	method="Add.doTest()I"
+	hotness="warm">
+<optimization id=11 name=OWL method=Add.doTest()I>
+Performing 11: OWL
+            (Building alias info)
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=12 name=coldBlockOutlining method=Add.doTest()I>
+Performing 12: coldBlockOutlining
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=13 name=stringBuilderTransformer method=Add.doTest()I>
+Performing 13: stringBuilderTransformer
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=14 name=stringPeepholes method=Add.doTest()I>
+Performing 14: stringPeepholes
+              (Invalidating alias info)
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=15 name=inlining method=Add.doTest()I>
+Performing 15: inlining
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=17 name=staticFinalFieldFolding method=Add.doTest()I>
+Performing 17: staticFinalFieldFolding
+            (Building alias info)
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=19 name=osrExceptionEdgeRemoval method=Add.doTest()I>
+Performing 19: osrExceptionEdgeRemoval
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=20 name=jProfilingBlock method=Add.doTest()I>
+Performing 20: jProfilingBlock
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=21 name=virtualGuardTailSplitter method=Add.doTest()I>
+Performing 21: virtualGuardTailSplitter
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=22 name=treeSimplification method=Add.doTest()I>
+Performing 22: treeSimplification
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+   <optgroup name=cheapGlobalValuePropagationGroup>
+<optimization id=28 name=localValuePropagation method=Add.doTest()I>
+Performing 28: localValuePropagation
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+      <optgroup name=cheapObjectAllocationGroup>
+<optimization id=32 name=localDeadStoreElimination method=Add.doTest()I>
+Performing 32: localDeadStoreElimination
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+      </optgroup>
+<optimization id=36 name=osrExceptionEdgeRemoval method=Add.doTest()I>
+Performing 36: osrExceptionEdgeRemoval
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=41 name=CFGSimplification method=Add.doTest()I>
+Performing 41: CFGSimplification
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+   </optgroup>
+<optimization id=42 name=dataAccessAccelerator method=Add.doTest()I>
+Performing 42: dataAccessAccelerator
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=46 name=blockSplitter method=Add.doTest()I>
+Performing 46: blockSplitter
+            (Doing structural analysis)
+         No transformations done by this pass -- omitting listings
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</optimization>
+
+<optimization id=47 name=treeSimplification method=Add.doTest()I>
+Performing 47: treeSimplification
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=48 name=virtualGuardHeadMerger method=Add.doTest()I>
+Performing 48: virtualGuardHeadMerger
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=49 name=basicBlockExtension method=Add.doTest()I>
+Performing 49: basicBlockExtension
+[     1] O^O ORDER BLOCKS:  Propagating coldness information
+[     2] O^O ORDER BLOCKS:  choose best successor for block_0 (freq:10000)
+[     3] O^O ORDER BLOCKS:  choose best successor for block_2 (freq:10000)
+[     4] O^O ORDER BLOCKS:  choose best successor for block_1 (freq:10000)
+<trees
+	title="Trees after basicBlockExtension"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees after basicBlockExtension: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=31 vn=- li=- udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=31 vn=- li=- udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=31 vn=- li=- udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=31 vn=- li=- udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=31 vn=- li=- udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=31 vn=- li=- udi=- nc=1
+n9n         iadd                                                                              [  0x352f7520] bci=[-1,6,5] rc=1 vc=31 vn=- li=- udi=- nc=2
+n7n           iload  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ] (cannotOverflow )             [  0x352f7480] bci=[-1,4,5] rc=1 vc=31 vn=- li=- udi=- nc=0 flg=0x1000
+n8n           iload  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ] (cannotOverflow )             [  0x352f74d0] bci=[-1,5,5] rc=1 vc=31 vn=- li=- udi=- nc=0 flg=0x1000
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=31 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Symbol References (incremental):
+--------------------------------
+#359:  java/lang/String[ Static] [flags 0x18307 0x0 ] [  0x35354010] (Address)
+
+Number of nodes = 10, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+</optimization>
+
+   <optgroup name=localValuePropagationGroup>
+<optimization id=50 name=localCSE method=Add.doTest()I>
+Performing 50: localCSE
+[     5] O^O LOCAL COMMON SUBEXPRESSION ELIMINATION:    Local Common Subexpression Elimination propagating local #357 in node : 00000000352F7480 PARENT : 00000000352F7520 from node 00000000352F7390
+         O^O LOCAL COMMON SUBEXPRESSION ELIMINATION:    Rhs of store def node : 00000000352F7340
+[     6] O^O LOCAL COMMON SUBEXPRESSION ELIMINATION:    Local Common Subexpression Elimination propagating local #358 in node : 00000000352F74D0 PARENT : 00000000352F7520 from node 00000000352F7430
+         O^O LOCAL COMMON SUBEXPRESSION ELIMINATION:    Rhs of store def node : 00000000352F73E0
+<trees
+	title="Trees after localCSE"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees after localCSE: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=31 vn=- li=- udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=39 vn=- li=- udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=2 vc=39 vn=- li=- udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=39 vn=- li=- udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=2 vc=39 vn=- li=- udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=39 vn=- li=- udi=- nc=1
+n9n         iadd                                                                              [  0x352f7520] bci=[-1,6,5] rc=1 vc=39 vn=- li=- udi=- nc=2
+n3n           ==>iconst 1
+n5n           ==>iconst 2
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=39 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+</optimization>
+
+<optimization id=51 name=localValuePropagation method=Add.doTest()I>
+Performing 51: localValuePropagation
+[     7] O^O VALUE PROPAGATION: Constant folding iadd [00000000352F7520]          to iconst 3
+<trees
+	title="Trees after localValuePropagation"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees after localValuePropagation: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=41 vn=- li=- udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=41 vn=- li=- udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=41 vn=- li=- udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=41 vn=- li=- udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=41 vn=- li=- udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=41 vn=- li=- udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=41 vn=- li=- udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=40 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+</optimization>
+
+   </optgroup>
+<optimization id=55 name=arraycopyTransformation method=Add.doTest()I>
+Performing 55: arraycopyTransformation
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=56 name=treeSimplification method=Add.doTest()I>
+Performing 56: treeSimplification
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=57 name=asyncCheckInsertion method=Add.doTest()I>
+Performing 57: asyncCheckInsertion
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=58 name=localCSE method=Add.doTest()I>
+Performing 58: localCSE
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=59 name=treeSimplification method=Add.doTest()I>
+Performing 59: treeSimplification
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=61 name=compactNullChecks method=Add.doTest()I>
+Performing 61: compactNullChecks
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=68 name=dynamicLiteralPool method=Add.doTest()I>
+Performing 68: dynamicLiteralPool
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=70 name=trivialBlockExtension method=Add.doTest()I>
+Performing 70: trivialBlockExtension
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+   <optgroup name=cheapTacticalGlobalRegisterAllocatorGroup>
+<optimization id=76 name=redundantGotoElimination method=Add.doTest()I>
+Performing 76: redundantGotoElimination
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=77 name=tacticalGlobalRegisterAllocator method=Add.doTest()I>
+Performing 77: tacticalGlobalRegisterAllocator
+         Weight of candidate (symRef #358 ) is 0
+         Weight of candidate (symRef #357 ) is 0
+<trees
+	title="Trees after tacticalGlobalRegisterAllocator"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees after tacticalGlobalRegisterAllocator: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=54 vn=- li=-1 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=54 vn=- li=-1 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=54 vn=- li=-1 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=54 vn=- li=-1 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=54 vn=- li=-1 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=54 vn=- li=- udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=54 vn=- li=- udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=54 vn=- li=- udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+</optimization>
+
+   </optgroup>
+<optimization id=78 name=jProfilingValue method=Add.doTest()I>
+Performing 78: jProfilingValue mustBeDone
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+   <optgroup name=globalDeadStoreGroup>
+<optimization id=80 name=deadTreesElimination method=Add.doTest()I>
+Performing 80: deadTreesElimination
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+   </optgroup>
+<optimization id=85 name=compactLocals method=Add.doTest()I>
+Performing 85: compactLocals
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=86 name=globalLiveVariablesForGC method=Add.doTest()I>
+Performing 86: globalLiveVariablesForGC
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<optimization id=88 name=regDepCopyRemoval method=Add.doTest()I>
+Performing 88: regDepCopyRemoval
+         No transformations done by this pass -- omitting listings
+</optimization>
+
+<trees
+	title="Post Optimization Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Post Optimization Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=61 vn=- li=-1 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=61 vn=- li=-1 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=61 vn=- li=- udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=61 vn=- li=-1 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=61 vn=- li=- udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=61 vn=- li=-1 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=61 vn=- li=- udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=61 vn=- li=-1 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+</optimize>
+         successfully verified compressedRefs anchors
+<codegen
+	method="Add.doTest()I"
+	hotness="warm">
+<LowerTrees>
+</LowerTrees>
+<trees
+	title="Post Lower Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Post Lower Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=64 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=64 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+<trees
+	title="Trees before this remat phase"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees before this remat phase: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=64 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=64 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=64 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=64 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+<trees
+	title="Trees after this remat phase"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Trees after this remat phase: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=65 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+<AllocateLinkageRegisters>
+</AllocateLinkageRegisters>
+[     8] O^O CODE GENERATION:  ===>   Identify and mark Unneeded b2i/i2b conversions  <===
+<trees
+	title="Pre Uncommon Call Constant Node Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Pre Uncommon Call Constant Node Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=65 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+Performing uncommon call constant nodes
+<trees
+	title="Post Uncommon Call Constant Node Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Post Uncommon Call Constant Node Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=65 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=65 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=65 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+<trees
+	title="Pre Instruction Selection Trees"
+	method="Add.doTest()I"
+	hotness="warm">
+
+Pre Instruction Selection Trees: for Add.doTest()I
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+n1n       BBStart <block_2> (freq 10000)                                                      [  0x352f72a0] bci=[-1,0,3] rc=0 vc=67 vn=- li=2 udi=- nc=0
+n4n       istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                  [  0x352f7390] bci=[-1,1,3] rc=0 vc=67 vn=- li=2 udi=- nc=1
+n3n         iconst 1 (X!=0 X>=0 )                                                             [  0x352f7340] bci=[-1,0,3] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+n6n       istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                  [  0x352f7430] bci=[-1,3,4] rc=0 vc=67 vn=- li=2 udi=- nc=1
+n5n         iconst 2 (X!=0 X>=0 )                                                             [  0x352f73e0] bci=[-1,2,4] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+n10n      ireturn                                                                             [  0x352f7570] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=1
+n9n         iconst 3 (X!=0 X>=0 )                                                             [  0x352f7520] bci=[-1,6,5] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+n2n       BBEnd </block_2>                                                                    [  0x352f72f0] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=0
+
+index:       node global index
+bci=[x,y,z]: byte-code-info [callee-index, bytecode-index, line-number]
+rc:          reference count
+vc:          visit count
+vn:          value number
+li:          local index
+udi:         use/def index
+nc:          number of children
+addr:        address size in bytes
+flg:         node flags
+
+Number of nodes = 8, symRefCount = 360
+</trees>
+
+<cfg>
+         0 [  0x35315140] entry
+                 in        = []
+                 out       = [2(10000) ]
+                 exception in  = []
+                 exception out = []
+         1 [  0x35315230] exit
+                 in        = [2(10000) ]
+                 out       = []
+                 exception in  = []
+                 exception out = []
+         2 [  0x353155d0] BBStart at   0x352f72a0, frequency = 10000
+                 in        = [0(10000) ]
+                 out       = [1(10000) ]
+                 exception in  = []
+                 exception out = []
+<structure>
+      0 [  0x35313190] Acyclic region
+         Subgraph: (* = exit edge)
+               (  0x35313260:  0x35313130)0 --> 2(  0x353132f0)
+               (  0x353132f0:  0x35313070)2 --> 1(  0x353133d0)
+               (  0x353133d0:  0x353130d0)1 -->
+         0 [  0x35313130] Block
+         2 [  0x35313070] Block
+         1 [  0x353130d0] Block
+</structure>
+</cfg>
+
+Performing Instruction Selection:
+
+
+============================================================
+; Live regs: GPR=0 FPR=0 VRF=0 {}
+------------------------------
+ n1n      (  0)  BBStart <block_2> (freq 10000)                                                       [  0x352f72a0] bci=[-1,0,3] rc=0 vc=67 vn=- li=2 udi=- nc=0
+------------------------------
+------------------------------
+ n1n      (  0)  BBStart <block_2> (freq 10000)                                                       [  0x352f72a0] bci=[-1,0,3] rc=0 vc=67 vn=- li=2 udi=- nc=0
+------------------------------
+
+ [  0x35388060]	Label L0032:			; LABEL
+========================================
+ [  0x35388100]	Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+
+============================================================
+; Live regs: GPR=0 FPR=0 VRF=0 {}
+------------------------------
+ n4n      (  0)  istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                   [  0x352f7390] bci=[-1,1,3] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n3n      (  1)    iconst 1 (X!=0 X>=0 )                                                              [  0x352f7340] bci=[-1,0,3] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+------------------------------
+------------------------------
+ n4n      (  0)  istore  <auto slot 0>[#357  Auto] [flags 0x3 0x0 ]                                   [  0x352f7390] bci=[-1,1,3] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n3n      (  0)    iconst 1 (X!=0 X>=0 )                                                              [  0x352f7340] bci=[-1,0,3] rc=0 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+------------------------------
+
+ [  0x353883b0]	mov	dword ptr [vfp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+
+============================================================
+; Live regs: GPR=0 FPR=0 VRF=0 {}
+------------------------------
+ n6n      (  0)  istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                   [  0x352f7430] bci=[-1,3,4] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n5n      (  1)    iconst 2 (X!=0 X>=0 )                                                              [  0x352f73e0] bci=[-1,2,4] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+------------------------------
+------------------------------
+ n6n      (  0)  istore  <auto slot 1>[#358  Auto] [flags 0x3 0x0 ]                                   [  0x352f7430] bci=[-1,3,4] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n5n      (  0)    iconst 2 (X!=0 X>=0 )                                                              [  0x352f73e0] bci=[-1,2,4] rc=0 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+------------------------------
+
+ [  0x35388740]	mov	dword ptr [vfp], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto] [flags 0x3 0x0 ]
+
+============================================================
+; Live regs: GPR=0 FPR=0 VRF=0 {}
+------------------------------
+ n10n     (  0)  ireturn                                                                              [  0x352f7570] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n9n      (  1)    iconst 3 (X!=0 X>=0 )                                                              [  0x352f7520] bci=[-1,6,5] rc=1 vc=67 vn=- li=2 udi=- nc=0 flg=0x104
+------------------------------
+------------------------------
+ n10n     (  0)  ireturn                                                                              [  0x352f7570] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=1
+ n9n      (  0)    iconst 3 (in GPR_0032) (X!=0 X>=0 )                                                [  0x352f7520] bci=[-1,6,5] rc=0 vc=67 vn=- li=2 udi=35264 nc=0 flg=0x104
+------------------------------
+
+ [  0x35388a40]	mov	GPR_0032, 0x00000003	; MOV4RegImm4
+ [  0x35388d40]	assocRegs                       ; ASSOCREGS
+	POST: None
+ [  0x35388b10]	ret                             ; RET
+	 PRE: [GPR_0032 : eax]
+
+============================================================
+; Live regs: GPR=0 FPR=0 VRF=0 {}
+------------------------------
+ n2n      (  0)  BBEnd </block_2>                                                                     [  0x352f72f0] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=0
+------------------------------
+------------------------------
+ n2n      (  0)  BBEnd </block_2>                                                                     [  0x352f72f0] bci=[-1,7,5] rc=0 vc=67 vn=- li=2 udi=- nc=0
+------------------------------
+
+ [  0x35388f00]	Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+ [  0x35389140]	assocRegs                       ; ASSOCREGS
+	POST: [GPR_0032 : eax]
+ [  0x35389220]	Label L0033:			; LABEL
+
+============================================================
+
+<instructions
+	title="Post Instruction Selection Instructions"
+	method="Add.doTest()I"
+	hotness="warm">
+
+                +--------------------------------------- instruction address
+                |       +------------------------------------------ 
+                |       |       +----------------------------------------- instruction
+                |       |       |
+                V       V       V
+ [  0x353872d0]	Label L0016:			; LABEL
+ [  0x35387450]	mov	GPR_0016, 0x000000000d3ac4d0	; MOV8RegImm64
+ [  0x35387800]	assocRegs                       ; ASSOCREGS
+	POST: None
+ [  0x353875b0]	jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+	 PRE: [GPR_0016 : edi]
+ [  0x35387880]	nop			; Alignment (boundary=8, margin=21)
+ [  0x35387910]	jmp	Label L0016			; JMP4
+ [  0x353879b0]	dw	0xcccc		; DWImm2
+ [  0x35387af0]	call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+ [  0x35387b90]	dq	0x000000000d0e1c50		; DQImm64
+ [  0x35387c20]	dd	0x00000001		; DDImm4
+ [  0x35387f20]	assocRegs                       ; ASSOCREGS
+	POST: [GPR_0016 : edi]
+ [  0x35387cf0]	ProcEntry                       ; PROCENTRY
+	POST: [GPR_0000 : ebp]
+ [  0x35388060]	Label L0032:			; LABEL
+========================================
+ [  0x35388100]	Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+ [  0x353883b0]	mov	dword ptr [vfp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+ [  0x35388740]	mov	dword ptr [vfp], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto] [flags 0x3 0x0 ]
+ [  0x35388a40]	mov	GPR_0032, 0x00000003	; MOV4RegImm4
+ [  0x35388d40]	assocRegs                       ; ASSOCREGS
+	POST: None
+ [  0x35388b10]	ret                             ; RET
+	 PRE: [GPR_0032 : eax]
+ [  0x35388f00]	Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+ [  0x35389140]	assocRegs                       ; ASSOCREGS
+	POST: [GPR_0032 : eax]
+ [  0x35389220]	Label L0033:			; LABEL
+</instructions>
+totalSlotsInMap is 0, numLocalObjectPaddingSlots is 0
+
+<instructions
+	title="Post Register Assignment Instructions"
+	method="Add.doTest()I"
+	hotness="warm">
+
+                +--------------------------------------- instruction address
+                |       +------------------------------------------ 
+                |       |       +----------------------------------------- instruction
+                |       |       |
+                V       V       V
+ [  0x353872d0]	Label L0016:			; LABEL
+ [  0x35387450]	mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+ [  0x35387800]	assocRegs                       ; ASSOCREGS
+ [  0x353875b0]	jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+ [  0x35387880]	nop			; Alignment (boundary=8, margin=21)
+ [  0x35387910]	jmp	Label L0016			; JMP4
+ [  0x353879b0]	dw	0xcccc		; DWImm2
+ [  0x35387af0]	call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+ [  0x35387b90]	dq	0x000000000d0e1c50		; DQImm64
+ [  0x35387c20]	dd	0x00000001		; DDImm4
+ [  0x35387f20]	assocRegs                       ; ASSOCREGS
+ [  0x35387cf0]	ProcEntry                       ; PROCENTRY
+ [  0x35388060]	Label L0032:			; LABEL
+========================================
+ [  0x35388100]	Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+ [  0x353883b0]	mov	dword ptr [vfp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+ [  0x35388740]	mov	dword ptr [vfp], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto] [flags 0x3 0x0 ]
+ [  0x35388a40]	mov	eax, 0x00000003	; MOV4RegImm4
+ [  0x35388d40]	assocRegs                       ; ASSOCREGS
+ [  0x35388b10]	ret                             ; RET
+ [  0x35388f00]	Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+ [  0x35389140]	assocRegs                       ; ASSOCREGS
+ [  0x35389220]	Label L0033:			; LABEL
+</instructions>
+
+<instructions
+	title="Post Stack Map"
+	method="Add.doTest()I"
+	hotness="warm">
+
+ [  0x353872d0]	Label L0016:			; LABEL
+ [  0x35387450]	mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+ [  0x35387800]	assocRegs                       ; ASSOCREGS
+ [  0x353875b0]	jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+ [  0x35387880]	nop			; Alignment (boundary=8, margin=21)
+ [  0x35387910]	jmp	Label L0016			; JMP4
+ [  0x353879b0]	dw	0xcccc		; DWImm2
+ [  0x35387af0]	call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+ [  0x35387b90]	dq	0x000000000d0e1c50		; DQImm64
+ [  0x35387c20]	dd	0x00000001		; DDImm4
+ [  0x35387f20]	assocRegs                       ; ASSOCREGS
+ [  0x35387cf0]	ProcEntry                       ; PROCENTRY
+ [  0x35388060]	Label L0032:			; LABEL
+========================================
+ [  0x35388100]	Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+ [  0x353883b0]	mov	dword ptr [vfp-0x8], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+ [  0x35388740]	mov	dword ptr [vfp-0x4], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto] [flags 0x3 0x0 ]
+ [  0x35388a40]	mov	eax, 0x00000003	; MOV4RegImm4
+ [  0x35388d40]	assocRegs                       ; ASSOCREGS
+ [  0x35388b10]	ret                             ; RET
+ [  0x35388f00]	Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+ [  0x35389140]	assocRegs                       ; ASSOCREGS
+ [  0x35389220]	Label L0033:			; LABEL
+</instructions>
+
+<instructions
+	title="Post Peephole Instructions"
+	method="Add.doTest()I"
+	hotness="warm">
+
+ [  0x353872d0]	Label L0016:			; LABEL
+ [  0x35387450]	mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+ [  0x35387800]	assocRegs                       ; ASSOCREGS
+ [  0x353875b0]	jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+ [  0x35387880]	nop			; Alignment (boundary=8, margin=21)
+ [  0x35387910]	jmp	Label L0016			; JMP4
+ [  0x353879b0]	dw	0xcccc		; DWImm2
+ [  0x35387af0]	call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+ [  0x35387b90]	dq	0x000000000d0e1c50		; DQImm64
+ [  0x35387c20]	dd	0x00000001		; DDImm4
+ [  0x35387f20]	assocRegs                       ; ASSOCREGS
+ [  0x35387cf0]	ProcEntry                       ; PROCENTRY
+ [  0x35388060]	Label L0032:			; LABEL
+========================================
+ [  0x35388100]	Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+ [  0x353883b0]	mov	dword ptr [vfp-0x8], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto -8] [flags 0x3 0x0 ]
+ [  0x35388740]	mov	dword ptr [vfp-0x4], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto -4] [flags 0x3 0x0 ]
+ [  0x35388a40]	mov	eax, 0x00000003	; MOV4RegImm4
+ [  0x35388d40]	assocRegs                       ; ASSOCREGS
+ [  0x35388b10]	ret                             ; RET
+ [  0x35388f00]	Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+ [  0x35389140]	assocRegs                       ; ASSOCREGS
+ [  0x35389220]	Label L0033:			; LABEL
+</instructions>
+<proepilogue>
+Stack size was 16, and is adjusted by +0 (alignment 16, return address width 8)
+
+Frame size: S- locals=8 frame=8 peak=16
+</proepilogue>
+<encode>
+</encode>
+
+<instructions
+	title="Post Binary Instructions"
+	method="Add.doTest()I"
+	hotness="warm">
+
+                 +--------------------------------------- instruction address
+                 |        +----------------------------------------- instruction offset from start of method
+                 |        |                   +------------------------------------------ corresponding TR::Instruction instance
+                 |        |                   |  +-------------------------------------------------- code bytes
+                 |        |                   |  |                          +-------------------------------------- opcode and operands
+                 |        |                   |  |                          |				+----------- additional information
+                 |        |                   |  |                          |				|
+                 V        V                   V  V                          V				V
+  0x252f3030 ffffffd8 [  0x353872d0]                                        Label L0016:			; LABEL
+  0x252f3030 ffffffd8 [  0x35387450] 48 bf d0 c4 3a 0d 00 00 00 00          mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+  0x252f303a ffffffe2 [  0x35387800]                                        assocRegs                       ; ASSOCREGS
+  0x252f303a ffffffe2 [  0x353875b0] e9 c1 7f f7 e5                         jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+  0x252f303f ffffffe7 [  0x35387880] 0f 1f 40 00                            nop (4 bytes)		; Alignment (boundary=8, margin=21)
+  0x252f3043 ffffffeb [  0x35387910] eb eb                                  jmp	Label L0016			; JMP1
+  0x252f3045 ffffffed [  0x353879b0] cc cc                                  dw	0xcccc		; DWImm2
+  0x252f3047 ffffffef [  0x35387af0] e8 b4 29 31 e5                         call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+  0x252f304c fffffff4 [  0x35387b90] 50 1c 0e 0d 00 00 00 00                dq	0x000000000d0e1c50		; DQImm64
+  0x252f3054 fffffffc [  0x35387c20] 11 00 00 00                            dd	0x00000011		; DDImm4
+  0x252f3058 00000000 [  0x35387f20]                                        assocRegs                       ; ASSOCREGS
+  0x252f3058 00000000 [  0x3538a990]                                        nop (0 bytes)		; Align patchable code @32 [0x0:2]
+  0x252f3058 00000000 [  0x35387cf0]                                        ProcEntry                       ; PROCENTRY
+  0x252f3058 00000000 [  0x3538aac0]                                        vfpSave			; AdjustFramePtr
+  0x252f3058 00000000 [  0x3538abe0] 48 3b 65 50                            cmp	rsp, qword ptr [rbp+0x50]		; CMP8RegMem, SymRef [#362 +80]
+  0x252f305c 00000004 [  0x3538ad90]                                        Label L0048:			; LABEL	; (Start of internal control flow)
+  0x252f305c 00000004 [  0x3538ae30] 76 a2                                  jbe	Outlined Label L0050			; JBE1
+  0x252f305e 00000006 [  0x3538aed0]                                        Label L0049:			; LABEL	; (End of internal control flow)
+  0x252f305e 00000006 [  0x3538b340] 48 83 ec 08                            sub	rsp, 0x00000008	; SUB8RegImms
+  0x252f3062 0000000a [  0x3538aa30]                                        vfpSave			; AdjustFramePtr
+  0x252f3062 0000000a [  0x35388060]                                        Label L0032:			; LABEL
+========================================
+  0x252f3062 0000000a [  0x35388100]                                        Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+  0x252f3062 0000000a [  0x353883b0] c7 04 24 01 00 00 00                   mov	dword ptr [rsp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+  0x252f3069 00000011 [  0x35388740] c7 44 24 04 02 00 00 00                mov	dword ptr [rsp+0x4], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto +4] [flags 0x3 0x0 ]
+  0x252f3071 00000019 [  0x35388a40] b8 03 00 00 00                         mov	eax, 0x00000003	; MOV4RegImm4
+  0x252f3076 0000001e [  0x35388d40]                                        assocRegs                       ; ASSOCREGS
+  0x252f3076 0000001e [  0x3538b3d0] 48 83 c4 08                            add	rsp, 0x00000008	; ADD8RegImms
+  0x252f307a 00000022 [  0x35388b10] c3                                     ret                             ; RET
+  0x252f307b 00000023 [  0x35388f00]                                        Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+  0x252f307b 00000023 [  0x35389140]                                        assocRegs                       ; ASSOCREGS
+  0x252f307b 00000023 [  0x35389220]                                        Label L0033:			; LABEL
+  0x252f307b 00000023 [  0x3538af70]                                        vfpRestore [  0x3538aac0]			; AdjustFramePtr
+  0x252f307b 00000023 [  0x3538b000]                                        Outlined Label L0050:			; LABEL
+  0x252f307b 00000023 [  0x3538b0a0] bf 08 00 00 00                         mov	edi, 0x00000008	; MOV4RegImm4
+  0x252f3080 00000028 [  0x3538b1c0] e8 7b 7f 8a e5                         call	jitStackOverflow        ; CALLImm4 (000000000AB9B000); CALLImm4
+  0x252f3085 0000002d [  0x3538b260] eb d7                                  jmp	Label L0049			; JMP1
+</instructions>
+<snippets>
+</snippets>
+
+<atlas>
+
+Internal stack atlas:
+  numberOfMaps=1
+  numberOfSlotsMapped=0
+  numberOfParmSlots=0
+  parmBaseOffset=8
+  localBaseOffset=0
+
+  Locals information : 
+  Local [  0x35315e60] (GC map index :  -1, Offset :  -4, Size : 4) is an uninitialized uncollected auto 
+  Local [  0x35315d70] (GC map index :  -1, Offset :  -8, Size : 4) is an uninitialized uncollected auto 
+
+  No internal pointers in this method
+
+  Map number : 1
+  Code offset range starts at [00000028]
+  GC stack map information : 
+    number of stack slots mapped = 0
+    live stack slots containing addresses --> {}
+  GC register map information : 
+    slot pushes: 0    registers: {}
+
+
+</atlas>
+
+<instructions
+	title="Post Relocation Instructions"
+	method="Add.doTest()I"
+	hotness="warm">
+
+                 +--------------------------------------- instruction address
+                 |        +----------------------------------------- instruction offset from start of method
+                 |        |                   +------------------------------------------ corresponding TR::Instruction instance
+                 |        |                   |  +-------------------------------------------------- code bytes
+                 |        |                   |  |                          +-------------------------------------- opcode and operands
+                 |        |                   |  |                          |				+----------- additional information
+                 |        |                   |  |                          |				|
+                 V        V                   V  V                          V				V
+  0x252f3030 ffffffd8 [  0x353872d0]                                        Label L0016:			; LABEL
+  0x252f3030 ffffffd8 [  0x35387450] 48 bf d0 c4 3a 0d 00 00 00 00          mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+  0x252f303a ffffffe2 [  0x35387800]                                        assocRegs                       ; ASSOCREGS
+  0x252f303a ffffffe2 [  0x353875b0] e9 c1 7f f7 e5                         jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+  0x252f303f ffffffe7 [  0x35387880] 0f 1f 40 00                            nop (4 bytes)		; Alignment (boundary=8, margin=21)
+  0x252f3043 ffffffeb [  0x35387910] eb eb                                  jmp	Label L0016			; JMP1
+  0x252f3045 ffffffed [  0x353879b0] cc cc                                  dw	0xcccc		; DWImm2
+  0x252f3047 ffffffef [  0x35387af0] e8 b4 29 31 e5                         call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+  0x252f304c fffffff4 [  0x35387b90] 50 1c 0e 0d 00 00 00 00                dq	0x000000000d0e1c50		; DQImm64
+  0x252f3054 fffffffc [  0x35387c20] 11 00 00 00                            dd	0x00000011		; DDImm4
+  0x252f3058 00000000 [  0x35387f20]                                        assocRegs                       ; ASSOCREGS
+  0x252f3058 00000000 [  0x3538a990]                                        nop (0 bytes)		; Align patchable code @32 [0x0:2]
+  0x252f3058 00000000 [  0x35387cf0]                                        ProcEntry                       ; PROCENTRY
+  0x252f3058 00000000 [  0x3538aac0]                                        vfpSave			; AdjustFramePtr
+  0x252f3058 00000000 [  0x3538abe0] 48 3b 65 50                            cmp	rsp, qword ptr [rbp+0x50]		; CMP8RegMem, SymRef [#362 +80]
+  0x252f305c 00000004 [  0x3538ad90]                                        Label L0048:			; LABEL	; (Start of internal control flow)
+  0x252f305c 00000004 [  0x3538ae30] 76 1d                                  jbe	Outlined Label L0050			; JBE1
+  0x252f305e 00000006 [  0x3538aed0]                                        Label L0049:			; LABEL	; (End of internal control flow)
+  0x252f305e 00000006 [  0x3538b340] 48 83 ec 08                            sub	rsp, 0x00000008	; SUB8RegImms
+  0x252f3062 0000000a [  0x3538aa30]                                        vfpSave			; AdjustFramePtr
+  0x252f3062 0000000a [  0x35388060]                                        Label L0032:			; LABEL
+========================================
+  0x252f3062 0000000a [  0x35388100]                                        Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+  0x252f3062 0000000a [  0x353883b0] c7 04 24 01 00 00 00                   mov	dword ptr [rsp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+  0x252f3069 00000011 [  0x35388740] c7 44 24 04 02 00 00 00                mov	dword ptr [rsp+0x4], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto +4] [flags 0x3 0x0 ]
+  0x252f3071 00000019 [  0x35388a40] b8 03 00 00 00                         mov	eax, 0x00000003	; MOV4RegImm4
+  0x252f3076 0000001e [  0x35388d40]                                        assocRegs                       ; ASSOCREGS
+  0x252f3076 0000001e [  0x3538b3d0] 48 83 c4 08                            add	rsp, 0x00000008	; ADD8RegImms
+  0x252f307a 00000022 [  0x35388b10] c3                                     ret                             ; RET
+  0x252f307b 00000023 [  0x35388f00]                                        Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+  0x252f307b 00000023 [  0x35389140]                                        assocRegs                       ; ASSOCREGS
+  0x252f307b 00000023 [  0x35389220]                                        Label L0033:			; LABEL
+  0x252f307b 00000023 [  0x3538af70]                                        vfpRestore [  0x3538aac0]			; AdjustFramePtr
+  0x252f307b 00000023 [  0x3538b000]                                        Outlined Label L0050:			; LABEL
+  0x252f307b 00000023 [  0x3538b0a0] bf 08 00 00 00                         mov	edi, 0x00000008	; MOV4RegImm4
+  0x252f3080 00000028 [  0x3538b1c0] e8 7b 7f 8a e5                         call	jitStackOverflow        ; CALLImm4 (000000000AB9B000); CALLImm4
+  0x252f3085 0000002d [  0x3538b260] eb d7                                  jmp	Label L0049			; JMP1
+</instructions>
+<snippets>
+</snippets>
+</codegen>
+<metadata>
+J9JITExceptionTable [000000003672A028]
+CP=[000000000D3AC510], slots=[0000000000000000], NumExcpRanges=[0000000000000000], size=[0000000000000108]
+startPC=     [00000000252F3058]
+endWarmPC=   [00000000252F3087]
+startColdPC= [0000000000000000]
+endPC=       [00000000252F3087]
+hotness=     [2]
+scalarTempSlots=1, objectTempSlots=0
+prologuePushes=0, tempOffset=0
+registerSaveDescription=[0000000000000000]
+totalFrameSize=1 { Real Frame Size: 16 }
+bodyInfo= [000000000D0E1C50]
+
+Stack Atlas:
+  numberOfSlotsMapped=0
+  numberOfMaps=1
+  numberOfMapBytes=1
+  parmBaseOffset=8
+  numberOfParmSlots=0
+  localBaseOffset=0
+  syncObjectTempOffset=-1
+
+Offset info: 
+    stackmap location: 000000003672A121
+    map range: starting at [00000000252F3080]
+      lowOffset: 00000028
+      byteCodeInfo: <_callerIndex=-1, byteCodeIndex=0>, _isSameReceiver=0, _doNotProfile=0
+      registerSaveDescription: starting at [3672A127] { 00000000 }
+      registers: 7FFE0000	{ 17:st(0) 18:st(1) 19:st(2) 20:st(3) 21:st(4) 22:st(5) 23:st(6) 24:st(7) 25:mm0 26:mm1 27:mm2 28:mm3 29:mm4 30:mm5 }
+      stack map: 	{ }
+
+
+
+</metadata>
+<instructions
+	title="Mixed Mode Disassembly"
+	method="Add.doTest()I">
+
+
+ \\ Add.doTest()I
+ \\    0 JBiconst1 
+
+  0x252f3030 ffffffd8 [  0x353872d0]                                        Label L0016:			; LABEL
+  0x252f3030 ffffffd8 [  0x35387450] 48 bf d0 c4 3a 0d 00 00 00 00          mov	rdi, 0x000000000d3ac4d0	; MOV8RegImm64
+  0x252f303a ffffffe2 [  0x35387800]                                        assocRegs                       ; ASSOCREGS
+  0x252f303a ffffffe2 [  0x353875b0] e9 c1 7f f7 e5                         jmp	j2iTransition           ; JMP4 (000000000B26B000); JMP4
+  0x252f303f ffffffe7 [  0x35387880] 0f 1f 40 00                            nop (4 bytes)		; Alignment (boundary=8, margin=21)
+  0x252f3043 ffffffeb [  0x35387910] eb eb                                  jmp	Label L0016			; JMP1
+  0x252f3045 ffffffed [  0x353879b0] 48 3b                                  dw	0xcccc		; DWImm2
+  0x252f3047 ffffffef [  0x35387af0] e8 b4 29 31 e5                         call	__samplingRecompileMethod; CALLImm4 (000000000A605A00); CALLImm4
+  0x252f304c fffffff4 [  0x35387b90] 50 1c 0e 0d 00 00 00 00                dq	0x000000000d0e1c50		; DQImm64
+  0x252f3054 fffffffc [  0x35387c20] 11 00 00 00                            dd	0x00000011		; DDImm4
+  0x252f3058 00000000 [  0x35387f20]                                        assocRegs                       ; ASSOCREGS
+  0x252f3058 00000000 [  0x3538a990]                                        nop (0 bytes)		; Align patchable code @32 [0x0:2]
+  0x252f3058 00000000 [  0x35387cf0]                                        ProcEntry                       ; PROCENTRY
+  0x252f3058 00000000 [  0x3538aac0]                                        vfpSave			; AdjustFramePtr
+  0x252f3058 00000000 [  0x3538abe0] 48 3b 65 50                            cmp	rsp, qword ptr [rbp+0x50]		; CMP8RegMem, SymRef [#362 +80]
+  0x252f305c 00000004 [  0x3538ad90]                                        Label L0048:			; LABEL	; (Start of internal control flow)
+  0x252f305c 00000004 [  0x3538ae30] 76 1d                                  jbe	Outlined Label L0050			; JBE1
+  0x252f305e 00000006 [  0x3538aed0]                                        Label L0049:			; LABEL	; (End of internal control flow)
+  0x252f305e 00000006 [  0x3538b340] 48 83 ec 08                            sub	rsp, 0x00000008	; SUB8RegImms
+  0x252f3062 0000000a [  0x3538aa30]                                        vfpSave			; AdjustFramePtr
+  0x252f3062 0000000a [  0x35388060]                                        Label L0032:			; LABEL
+========================================
+  0x252f3062 0000000a [  0x35388100]                                        Fence Relative [ 0000000035315670 ]	; FENCE BBStart <block_2> (frequency 10000)
+
+ \\ Add.doTest()I
+ \\    1 JBistore0 
+
+  0x252f3062 0000000a [  0x353883b0] c7 04 24 01 00 00 00                   mov	dword ptr [rsp], 0x00000001	; S4MemImm4, SymRef  <auto slot 0>[#360  Auto] [flags 0x3 0x0 ]
+
+ \\ Add.doTest()I
+ \\    3 JBistore1 
+
+  0x252f3069 00000011 [  0x35388740] c7 44 24 04 02 00 00 00                mov	dword ptr [rsp+0x4], 0x00000002	; S4MemImm4, SymRef  <auto slot 1>[#361  Auto +4] [flags 0x3 0x0 ]
+
+ \\ Add.doTest()I
+ \\    6 JBiadd 
+
+  0x252f3071 00000019 [  0x35388a40] b8 03 00 00 00                         mov	eax, 0x00000003	; MOV4RegImm4
+  0x252f3076 0000001e [  0x35388d40]                                        assocRegs                       ; ASSOCREGS
+  0x252f3076 0000001e [  0x3538b3d0] 48 83 c4 08                            add	rsp, 0x00000008	; ADD8RegImms
+
+ \\ Add.doTest()I
+ \\    7 JBreturn1 
+
+  0x252f307a 00000022 [  0x35388b10] c3                                     ret                             ; RET
+  0x252f307b 00000023 [  0x35388f00]                                        Fence Relative [ 0000000035315674 ]	; FENCE BBEnd </block_2>
+  0x252f307b 00000023 [  0x35389140]                                        assocRegs                       ; ASSOCREGS
+  0x252f307b 00000023 [  0x35389220]                                        Label L0033:			; LABEL
+  0x252f307b 00000023 [  0x3538af70]                                        vfpRestore [  0x3538aac0]			; AdjustFramePtr
+  0x252f307b 00000023 [  0x3538b000]                                        Outlined Label L0050:			; LABEL
+
+ \\ Add.doTest()I
+ \\    0 JBiconst1 
+
+  0x252f307b 00000023 [  0x3538b0a0] bf 08 00 00 00                         mov	edi, 0x00000008	; MOV4RegImm4
+  0x252f3080 00000028 [  0x3538b1c0] e8 7b 7f 8a e5                         call	jitStackOverflow        ; CALLImm4 (000000000AB9B000); CALLImm4
+  0x252f3085 0000002d [  0x3538b260] eb d7                                  jmp	Label L0049			; JMP1
+</instructions>
+<snippets>
+</snippets>
+</jitlog>
