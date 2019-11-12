@@ -8,18 +8,28 @@
 using namespace std;
 int main(){
 
-    TR_OWLJNIClient *jniClient = new TR_OWLJNIClient();
-    if (jniClient->startJVM()){
+    if (TR_OWLJNIClient::startJVM()){
+        TR_OWLJNIClient *jniClient = TR_OWLJNIClient::getInstance();
+        TR_OWLDeserializer* deserializer = new TR_OWLDeserializer();
+        vector<OWLInstruction> owlInstructions = deserializer->deserialize();
+        delete deserializer;
 
-        vector<OWLInstruction> owlInstructions = deserialize();
         TR_OWLShrikeBTConstructor* constructor = new TR_OWLShrikeBTConstructor(jniClient);
         vector<jobject> shrikeBTInstructions = constructor->constructShrikeBTInstructions(owlInstructions);
-        TR_OWLAnalyser * ana = new TR_OWLAnalyser(jniClient);
-        ana->analyse(shrikeBTInstructions);
-        delete jniClient;
+        TR_OWLAnalyser * analyser = new TR_OWLAnalyser(jniClient);
+        analyser->analyse(shrikeBTInstructions);
+        
+        delete analyser;
+        delete constructor;
     }
     else{
         printf("JVM cannot be start!\n");
+        exit(1);
     }
+    TR_OWLJNIClient::destroyJVM();
+    TR_OWLJNIClient::destroyInstance();
+
     return 0;
+
+    
 }
