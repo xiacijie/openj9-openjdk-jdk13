@@ -1,0 +1,398 @@
+
+#INFO:  t=     0 Created compThread 0 as ACTIVE
+#DISPATCH: Starting to process queue entries. compThread=0 state=1 Q_SZ=0 Q_SZI=0 QW=0
+
+#INFO:  t=     0 Created compThread 1 as SUSPENDED
+#INFO:  t=     0 Created compThread 2 as SUSPENDED
+#INFO:  t=     0 Created compThread 3 as SUSPENDED
+#INFO:  t=     0 Created compThread 4 as SUSPENDED
+#INFO:  t=     0 Created compThread 5 as SUSPENDED
+#INFO:  t=     0 Created compThread 6 as SUSPENDED
+#INFO:  t=     0 Created compThread 7 as SUSPENDED
+#INFO:  _______________________________________
+#INFO:  Version Information:
+#INFO:       JIT Level  - ef84f26ea
+#INFO:       JVM Level  - 20191201_000000
+#INFO:       GC Level   - ef84f26ea
+#INFO:  
+#INFO:  Processor Information:
+#INFO:       Platform Info:X86 Intel P6
+#INFO:       Vendor:GenuineIntel
+#INFO:       numProc=8
+#INFO:  
+#INFO:  _______________________________________
+#INFO:  AOT 
+#INFO:  options specified:
+#INFO:       samplingFrequency=2
+#INFO:  
+#INFO:  options in effect:
+#INFO:       disableAsyncCompilation
+#INFO:       disableGuardedCountingRecompilation
+#INFO:       verbose={options|compileStart|compileEnd|compileRequest|compilePerformance|compileExclude|compilationYieldStats|compilationThreads|compilationThreadsDetails|compilationDispatch}
+#INFO:       vlog=vlog.out
+#INFO:       compressedRefs shiftAmount=3
+#INFO:       compressedRefs isLowMemHeap=1
+#INFO:  _______________________________________
+#INFO:  JIT 
+#INFO:  options specified:
+#INFO:       disableAsyncCompilation,disableGuardedCountingRecompilation,enableOWL,limit={*.doTest*},{*.doTest*}(count=1,traceFull,log=comp.log),verbose={comp*},vlog=vlog.out
+#INFO:  
+#INFO:  options in effect:
+#INFO:       disableAsyncCompilation
+#INFO:       disableGuardedCountingRecompilation
+#INFO:       verbose={options|compileStart|compileEnd|compileRequest|compilePerformance|compileExclude|compilationYieldStats|compilationThreads|compilationThreadsDetails|compilationDispatch}
+#INFO:       vlog=vlog.out
+#INFO:       compressedRefs shiftAmount=3
+#INFO:       compressedRefs isLowMemHeap=1
+#INFO:  StartTime: Dec 01 17:36:30 2019
+#INFO:  Free Physical Memory: 92 MB estimated
+#INFO:  CPU entitlement = 800.00
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134287D0 java/lang/Double.longBitsToDouble(J)D optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134287D0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Double.longBitsToDouble(J)D cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013413C98 jdk/internal/reflect/Reflection.getCallerClass()Ljava/lang/Class; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013413C98 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/reflect/Reflection.getCallerClass()Ljava/lang/Class; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013422CB0 java/lang/System.getEncoding(I)Ljava/lang/String; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013422CB0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/System.getEncoding(I)Ljava/lang/String; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001340AE30 jdk/internal/misc/Unsafe.objectFieldOffset1(Ljava/lang/Class;Ljava/lang/String;)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AE30 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.objectFieldOffset1(Ljava/lang/Class;Ljava/lang/String;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000133FF898 java/lang/Class.getDeclaredFieldImpl(Ljava/lang/String;)Ljava/lang/reflect/Field; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133FF898 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Class.getDeclaredFieldImpl(Ljava/lang/String;)Ljava/lang/reflect/Field; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001340AE70 jdk/internal/misc/Unsafe.staticFieldBase0(Ljava/lang/reflect/Field;)Ljava/lang/Object; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AE70 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.staticFieldBase0(Ljava/lang/reflect/Field;)Ljava/lang/Object; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001340AE50 jdk/internal/misc/Unsafe.staticFieldOffset0(Ljava/lang/reflect/Field;)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AE50 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.staticFieldOffset0(Ljava/lang/reflect/Field;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013489CA0 java/io/FileDescriptor.getHandle(I)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013489CA0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/FileDescriptor.getHandle(I)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013489CC0 java/io/FileDescriptor.getAppend(I)Z optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013489CC0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/FileDescriptor.getAppend(I)Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013422DD0 java/lang/System.setFieldImpl(Ljava/lang/String;Ljava/lang/Object;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013422DD0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/System.setFieldImpl(Ljava/lang/String;Ljava/lang/Object;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013408D28 com/ibm/jit/JITHelpers.is32Bit()Z optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013408D28 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.is32Bit()Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013408E88 com/ibm/jit/JITHelpers.getJ9ClassFromClass64(Ljava/lang/Class;)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013408E88 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.getJ9ClassFromClass64(Ljava/lang/Class;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013409088 com/ibm/jit/JITHelpers.getClassDepthAndFlagsFromJ9Class64(J)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013409088 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.getClassDepthAndFlagsFromJ9Class64(J)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134090A8 com/ibm/jit/JITHelpers.getBackfillOffsetFromJ9Class64(J)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134090A8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.getBackfillOffsetFromJ9Class64(J)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000133FB700 com/ibm/oti/vm/VM.getClassNameImpl(Ljava/lang/Class;)Ljava/lang/String; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133FB700 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/oti/vm/VM.getClassNameImpl(Ljava/lang/Class;)Ljava/lang/String; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001340AEB0 jdk/internal/misc/Unsafe.ensureClassInitialized0(Ljava/lang/Class;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AEB0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.ensureClassInitialized0(Ljava/lang/Class;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013408AA8 com/ibm/jit/JITHelpers.byteToCharUnsigned(B)C optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013408AA8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.byteToCharUnsigned(B)C cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013425710 jdk/internal/misc/VM.initializeFromArchive(Ljava/lang/Class;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013425710 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/VM.initializeFromArchive(Ljava/lang/Class;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013408B88 com/ibm/jit/JITHelpers.getCharFromArrayByIndex(Ljava/lang/Object;I)C optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013408B88 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.getCharFromArrayByIndex(Ljava/lang/Object;I)C cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134D40F0 sun/nio/fs/UnixNativeDispatcher.stat1(J)I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134D40F0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! sun/nio/fs/UnixNativeDispatcher.stat1(J)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013405060 java/lang/String.lengthInternal()I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013405060 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/String.lengthInternal()I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000133F9CB8 java/lang/Object.<init>()V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 2 to comp queue. Now Q_SZ=1 weight=2
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133F9CB8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Object.<init>()V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013404E80 java/lang/String.hashCode()I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013404E80 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/String.hashCode()I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013404C40 java/lang/String.charAtInternal(I[B)C optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013404C40 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/String.charAtInternal(I[B)C cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013421420 java/lang/Module.defineModule0(Ljava/lang/Module;ZLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013421420 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Module.defineModule0(Ljava/lang/Module;ZLjava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013408B68 com/ibm/jit/JITHelpers.putCharInArrayByIndex(Ljava/lang/Object;IC)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013408B68 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/jit/JITHelpers.putCharInArrayByIndex(Ljava/lang/Object;IC)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134E8D28 java/util/ImmutableCollections$SetN$SetNIterator.nextIndex()I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134E8D28 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/util/ImmutableCollections$SetN$SetNIterator.nextIndex()I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013421440 java/lang/Module.addReads0(Ljava/lang/Module;Ljava/lang/Module;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013421440 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Module.addReads0(Ljava/lang/Module;Ljava/lang/Module;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013421480 java/lang/Module.addExportsToAll0(Ljava/lang/Module;Ljava/lang/String;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013421480 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Module.addExportsToAll0(Ljava/lang/Module;Ljava/lang/String;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013421460 java/lang/Module.addExports0(Ljava/lang/Module;Ljava/lang/String;Ljava/lang/Module;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013421460 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Module.addExports0(Ljava/lang/Module;Ljava/lang/String;Ljava/lang/Module;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013426340 java/lang/Math.floorMod(II)I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013426340 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Math.floorMod(II)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134214A0 java/lang/Module.addExportsToAllUnnamed0(Ljava/lang/Module;Ljava/lang/String;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134214A0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Module.addExportsToAllUnnamed0(Ljava/lang/Module;Ljava/lang/String;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134E8D48 java/util/ImmutableCollections$SetN$SetNIterator.next()Ljava/lang/Object; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 12 to comp queue. Now Q_SZ=1 weight=12
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134E8D48 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/util/ImmutableCollections$SetN$SetNIterator.next()Ljava/lang/Object; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134E8D08 java/util/ImmutableCollections$SetN$SetNIterator.hasNext()Z optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134E8D08 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/util/ImmutableCollections$SetN$SetNIterator.hasNext()Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013457658 java/util/HashMap.hash(Ljava/lang/Object;)I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013457658 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/util/HashMap.hash(Ljava/lang/Object;)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001341A080 java/lang/ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=000000001341A080 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000133FF998 java/lang/Class.getDeclaredMethodImpl(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/reflect/Method;)Ljava/lang/reflect/Method; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133FF998 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Class.getDeclaredMethodImpl(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;Ljava/lang/reflect/Method;)Ljava/lang/reflect/Method; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001346BC50 java/security/AccessController.getAccSnapshot(IZ)[Ljava/lang/Object; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001346BC50 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/security/AccessController.getAccSnapshot(IZ)[Ljava/lang/Object; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134FD5E8 jdk/internal/misc/Signal.findSignal0(Ljava/lang/String;)I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134FD5E8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Signal.findSignal0(Ljava/lang/String;)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134FD608 jdk/internal/misc/Signal.handle0(IJ)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134FD608 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Signal.handle0(IJ)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001342B3F0 java/lang/Thread.setNameImpl(JLjava/lang/String;)V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001342B3F0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Thread.setNameImpl(JLjava/lang/String;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001340AE10 jdk/internal/misc/Unsafe.objectFieldOffset0(Ljava/lang/reflect/Field;)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AE10 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.objectFieldOffset0(Ljava/lang/reflect/Field;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000133FFB58 java/lang/Class.getMethodImpl(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133FFB58 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Class.getMethodImpl(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001347E318 java/lang/Access.getConstantPool(Ljava/lang/Class;)Ljdk/internal/reflect/ConstantPool; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001347E318 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Access.getConstantPool(Ljava/lang/Class;)Ljdk/internal/reflect/ConstantPool; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013527AA8 jdk/internal/reflect/NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013527AA8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/reflect/NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001342B4D0 java/lang/Thread.startImpl()V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001342B4D0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/Thread.startImpl()V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001349E3F8 java/io/UnixFileSystem.getBooleanAttributes0(Ljava/io/File;)I optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001349E3F8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/UnixFileSystem.getBooleanAttributes0(Ljava/io/File;)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001352D870 openj9/internal/tools/attach/target/CommonDirectory.getFileOwner(Ljava/lang/String;)J optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001352D870 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! openj9/internal/tools/attach/target/CommonDirectory.getFileOwner(Ljava/lang/String;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001349E3B8 java/io/UnixFileSystem.canonicalize0(Ljava/lang/String;)Ljava/lang/String; optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001349E3B8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/UnixFileSystem.canonicalize0(Ljava/lang/String;)Ljava/lang/String; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=0000000013523750 openj9/internal/tools/attach/target/IPC.getUid()J optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013523750 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! openj9/internal/tools/attach/target/IPC.getUid()J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001340AD50 jdk/internal/misc/Unsafe.allocateMemory0(J)J optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AD50 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.allocateMemory0(J)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001340ADD0 jdk/internal/misc/Unsafe.copyMemory0(Ljava/lang/Object;JLjava/lang/Object;JJ)V optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340ADD0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.copyMemory0(Ljava/lang/Object;JLjava/lang/Object;JJ)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001349E4B8 java/io/UnixFileSystem.createFileExclusively(Ljava/lang/String;)Z optLevel=2
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134FC3A0 java/io/FileInputStream.open0(Ljava/lang/String;)V optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#CR:  00000000133D3A00   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=2 weight=2
+#DISPATCH: Compilation thread executing compile(): j9method=000000001349E4B8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/UnixFileSystem.createFileExclusively(Ljava/lang/String;)Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134FC3A0 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/FileInputStream.open0(Ljava/lang/String;)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=000000001349E478 java/io/UnixFileSystem.getLength(Ljava/io/File;)J optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001349E478 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/UnixFileSystem.getLength(Ljava/io/File;)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=00000000134FC420 java/io/FileInputStream.readBytes([BII)I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000134FC420 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/FileInputStream.readBytes([BII)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013489D80 java/io/FileDescriptor.close0()V optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013489D80 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/FileDescriptor.close0()V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=0000000013533538 openj9/internal/tools/attach/target/FileLock.lockFileImpl(Ljava/lang/String;IZ)J optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013419E00 java/lang/ClassLoader.defineClassImpl(Ljava/lang/String;[BIILjava/lang/Object;)Ljava/lang/Class; optLevel=2
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013533538 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=2
+! openj9/internal/tools/attach/target/FileLock.lockFileImpl(Ljava/lang/String;IZ)J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013419E00 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/ClassLoader.defineClassImpl(Ljava/lang/String;[BIILjava/lang/Object;)Ljava/lang/Class; cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013419D60 java/lang/ClassLoader.isVerboseImpl()Z optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013419D60 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/ClassLoader.isVerboseImpl()Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=0000000013523790 openj9/internal/tools/attach/target/IPC.getProcessId()J optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46D06F40 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013523790 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! openj9/internal/tools/attach/target/IPC.getProcessId()J cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000133D3A00   Compile request OrdinaryMethod j9method=0000000013547568 Test.doTest()I optLevel=2
+#CR:  00000000133D3A00   Added entry 00007FEA46D06F40 of weight 6 to comp queue. Now Q_SZ=1 weight=6
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013547568 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+ (warm) Compiling Test.doTest()I  OrdinaryMethod j9m=0000000013547568 t=108 compThread=0 memLimit=262144 KB freePhysicalMemory=91 MB
+#DISPATCH: Compiling Test.doTest()I @ warm
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=0000000013472678 java/lang/StringUTF16.getChar([BI)C optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46C539C0 of weight 6 to comp queue. Now Q_SZ=1 weight=12
+#DISPATCH: Successfully created compiled body [000000002C33B058-000000002C33B087] for Test.doTest()I @ warm
+#PERF:  max yield-to-yield time of 2078 usec for regDepCopyRemoval -- AFTER_INSTRUCTION_SELECTION_CONTEXT
+#DISPATCH: Creating metadata for Test.doTest()I @ warm
+#DISPATCH: Successfully created metadata [000000003D6A8028] for Test.doTest()I @ warm
++ (warm) Test.doTest()I @ 000000002C33B058-000000002C33B087 OrdinaryMethod - Q_SZ=1 Q_SZI=1 QW=12 j9m=0000000013547568 bcsz=8 sync time=8260us mem=[region=768 system=16384]KB compThread=0 CpuLoad=0%(0%avg) JvmCpu=0%
+#DISPATCH: CompilationEnd returning startPC=000000002C33B058  metadata=000000003D6A8028
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013472678 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/lang/StringUTF16.getChar([BI)C cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=0000000013533558 openj9/internal/tools/attach/target/FileLock.unlockFileImpl(J)I optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=0000000013533558 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! openj9/internal/tools/attach/target/FileLock.unlockFileImpl(J)I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000134BD200   Compile request OrdinaryMethod j9method=00000000133FB780 com/ibm/oti/vm/VM.markCurrentThreadAsSystemImpl()I optLevel=2
+#CR:  00000000134BD200   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=00000000133FB780 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! com/ibm/oti/vm/VM.markCurrentThreadAsSystemImpl()I cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  0000000013536700   Compile request OrdinaryMethod j9method=000000001340AD90 jdk/internal/misc/Unsafe.freeMemory0(J)V optLevel=2
+#CR:  0000000013536700   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001340AD90 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! jdk/internal/misc/Unsafe.freeMemory0(J)V cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#CR:  00000000134BD200   Compile request OrdinaryMethod j9method=000000001349E4F8 java/io/UnixFileSystem.delete0(Ljava/io/File;)Z optLevel=2
+#CR:  00000000134BD200   Added entry 00007FEA46C539C0 of weight 1 to comp queue. Now Q_SZ=1 weight=1
+#DISPATCH: Compilation thread executing compile(): j9method=000000001349E4F8 isAotLoad=0 canDoRelocatableCompile=0 eligibleForRelocatableCompile=0 isRemoteCompReq=0 _doNotUseAotCodeFromSharedCache=0 AOTfe=0 isDLT=0
+! java/io/UnixFileSystem.delete0(Ljava/io/File;)Z cannot be translated
+#DISPATCH: CompilationEnd returning startPC=0000000000000000  metadata=0000000000000000
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =0 ms
+#PERF:  Time spent in compilation thread =10 ms

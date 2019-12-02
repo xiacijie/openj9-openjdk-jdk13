@@ -1,0 +1,1 @@
+rm -rf comp.log* core.* vlog.out* jitdump* javacore* Snap.*
